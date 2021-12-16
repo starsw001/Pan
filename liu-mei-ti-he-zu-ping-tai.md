@@ -4,21 +4,18 @@ description: 介绍两个靠谱的流媒体合租平台
 
 # 🎬 奈飞Disney+流媒体合租平台
 
-### [**奈飞 PRO公众号**](https://naifei.pro/m/?rid=1p5c6)**（Netflix+Youtube+Spotify  等流媒体合租\)**
+### [**奈飞 PRO公众号**](https://naifei.pro/m/?rid=1p5c6)****[**（**<mark style="color:red;">**Netflix**</mark>**+**<mark style="color:blue;">**Disney**</mark>**+**<mark style="color:green;">**Spotify**</mark>**  等流媒体合租)**](https://naifei.pro/m/?rid=1p5c6)****
 
-![](.gitbook/assets/image%20%2815%29.png)
+![](.gitbook/assets/pro.jpeg)
 
-### \*\*\*\*
+### **Disney+会员 11月开始 几乎所有影片全面增加中文字幕**
 
-### \*\*\*\*[**奈飞小镇公众号**](https://netflixtown.com/user?sid=5lETuC) **（Disney+会员+HBO MAX+Netflix 等流媒体合租）**
+## [<mark style="color:blue;">Disney+ 完全使用指南</mark>](https://guide.naifei.pro/disney)
 
-![](.gitbook/assets/jie-ping-20210831-xia-wu-9.35.08.png)
+![](.gitbook/assets/WX20211115-202812@2x.png)
 
-## **Disney+   目前开放的国家和地区是美国和新加坡，11月会有港台**
+## <mark style="color:red;">****</mark>[<mark style="color:red;">**Netflix 使用指南**</mark>](https://guide.naifei.pro/netflix)<mark style="color:red;">****</mark>
 
-![&#x5948;&#x98DE;&#x5C0F;&#x9547;&#x6D41;&#x5A92;&#x4F53;&#x5408;&#x79DF;](.gitbook/assets/330.png)
+![](.gitbook/assets/jie-ping-20210103-xia-wu-10.26.48.png)
 
-![](.gitbook/assets/jie-ping-20210831-xia-wu-9.07.30.png)
-
-### \*\*\*\*
-
+## <mark style="color:red;">****</mark>

@@ -4,9 +4,9 @@ description: 解决方法 通过修改ntp服务器地址 改成国内NTP服务�
 
 # Google TV /Shield TV/Tivo Stream 4K 已连接无法访问互联网
 
-##  **方法1：利用电脑**
+## &#x20;**方法1：利用电脑**
 
-## **adb 工具包地址-** [**下载**](https://drive.google.com/drive/folders/1PIT3issyC3qD_mjt9HRVJkM2qTlphXWk?usp=sharing)  **或者**[**github下载地址**](https://github.com/ligl0702/Pan/releases/tag/ADB)\*\*\*\*
+## **adb 工具包地址-** [**下载**](https://drive.google.com/drive/folders/1PIT3issyC3qD\_mjt9HRVJkM2qTlphXWk?usp=sharing)  **或者**[**github下载地址**](https://github.com/ligl0702/Pan/releases/tag/ADB)****
 
 {% hint style="danger" %}
 #### **注意:若你没有科学上网,出现已连接无法访问互联网的提示属于正常**
@@ -18,47 +18,85 @@ description: 解决方法 通过修改ntp服务器地址 改成国内NTP服务�
 
 相关视频：[https://www.youtube.com/watch?v=0H27uZYdkxk](https://www.youtube.com/watch?v=0H27uZYdkxk)
 
- 1、**打开adb**`设置-系统-关于-连续点击4次 Android TV操作系统版本，此时回到系统就有开发者选项-勾选USB调试`
+&#x20;1、**打开adb**`设置-系统-关于-连续点击4次 Android TV操作系统版本，此时回到系统就有开发者选项-勾选USB调试`
 
-2、**连接adb**（下载adb工具包-位于网盘） 如果有弹框 请点击确定按钮
+2、**连接adb**（下载adb工具包-位于网盘） 如果有弹框 请点击确定按钮，如果没有弹框，请检查开发者模式下的USB调试模式是否打开，也可以反复开启和关闭USB调试按钮的开关，还可以点击下方的撤销调试模式的授权，ADB这个功能在android底层本身还是有一些bug的，需要是反复开启和关闭，直到你输入
+
+adb shell 回车之后，能成功进入命令行模式，才算是真正的连接成功。退出命令行模式用exit回车
 
 ```
 $ adb connect 192.168.xx.xx
 ```
 
-3、**写入新的ntp服务器地址** 
+3、**写入新的ntp服务器地址**&#x20;
 
 ```
-$ adb shell settings put global ntp_server ntp1.aliyun.com 
+adb shell settings put global ntp_server ntp3.aliyun.com 
 ```
 
 {% hint style="success" %}
- 备用地址 
+&#x20;国内ntp服务器 备用地址&#x20;
 
-dns1.synet.edu.cn 
+ntp1.aliyun.com&#x20;
 
-news.neu.edu.cn 
+ntp2.aliyun.com&#x20;
 
-dns.sjtu.edu.cm 
+ntp3.aliyun.com&#x20;
 
-dns2.synet.edu.cn 
+ntp4.aliyun.com&#x20;
 
-ntp.glnet.edu.cn 
+ntp5.aliyun.com&#x20;
 
-ntp1.aliyun.com 
-
-ntp2.aliyun.com 
-
-ntp3.aliyun.com 
-
-ntp4.aliyun.com 
-
-ntp5.aliyun.com 
-
-ntp6.aliyun.com 
+ntp6.aliyun.com&#x20;
 
 ntp7.aliyun.com
 {% endhint %}
+
+&#x20;      <mark style="color:red;">**如果你没有使用软路由，而是在电视盒子里使用了代理软件比如clash或者其他vpn**</mark>，那么你会发现，即便修改了时间服务器地址，<mark style="color:red;">**每次重启盒子，首先是wifi并不会自动连接，其次就算连接也还是会提示网络受限**</mark>。这是因为Android原生电视盒子的联网原理导致的，源码中有一个叫做isCaptivePortal() 的函数，用来检查网络状况的判断，它需要一个返回值http 204 （空内容的意思）的网址，源码里默认使用 clients3.google.com/generate\_204 这个网址，很显然这个网址，你若没用代理是访问不到的。<mark style="color:red;">**因此安卓就没法正确判断当前的网络状态**</mark>，所以要想解决此问题，需要我们换成一个能在国内直接访问的，用于返回http 204的网址。我们姑且把它叫做 验证服务器 吧。目前已经有很多公司制作了这样的验证服务器。
+
+{% hint style="info" %}
+```
+小米： connect.rom.miui.com/generate_204
+华为： connectivitycheck.platform.hicloud.com/generate_204
+Vivo： wifi.vivo.com.cn/generate_204
+```
+{% endhint %}
+
+#### 具体修改方法：&#x20;
+
+```java
+# 打开网络验
+//如果你是Android 11.0 以上的电视盒子（还比较少）
+adb shell settings put global captive_portal_mode 1
+
+//Android 10.0 以下的电视盒子（比较多）
+adb shell settings put global captive_portal_detection_enabled 1
+
+# 设置一个返回204 空内容的服务器
+adb shell settings put global captive_portal_use_https 0
+adb shell settings put global captive_portal_http_url http://connect.rom.miui.com/generate_204
+
+```
+
+{% hint style="info" %}
+<mark style="color:red;">**⬆️注意上述代码中http\_url 后面是空格，不是换行哦**</mark>
+{% endhint %}
+
+**如何查看设置的参数？**
+
+```
+adb shell settings list global
+```
+
+#### **如何恢复原来的参数？**
+
+```
+# 使用默认，即删除配置
+adb shell settings delete global captive_portal_http_url
+adb shell settings delete global captive_portal_https_url
+```
+
+****
 
 **4、重启Google TV后生效**
 
@@ -70,9 +108,7 @@ ntp7.aliyun.com
 
 ## 方法2：利用手机app
 
- [**利用我开发的安卓手机app 一键修改NTP服务器地址 ←**](../11.md) ****
+&#x20;[**利用我开发的安卓手机app 一键修改NTP服务器地址 ←**](../11.md) ****&#x20;
 
-![](../.gitbook/assets/image%20%2810%29.png)
-
-
+![](../.gitbook/assets/ntp-up.png)
 

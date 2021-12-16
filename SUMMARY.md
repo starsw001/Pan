@@ -4,47 +4,44 @@
 
 ## 首页-向下滑动更多↓
 
----
+***
 
 * [❓高频提问汇总↓↓↓](gao-pin-ti-wen.md)
+* [❤️快速查看群号](wu-kong-qun-zu-hui-zong.md)
 * [📺视频发布平台汇总](shi-pin-fa-bu-ping-tai-hui-zong.md)
 * [❤️悟空的微店](ge-ren-xian-yu.md)
-* [🎈遥控助手下载地址](11.md)
-* [❤️ Emby影库推荐（国庆优惠）](emby-ying-ku-tui-jian-kuo-he-guo-nei.md)
-* [👩‍👩‍👧查看全部群号](wu-kong-qun-zu-hui-zong.md)
+* [🛩 软路由使用指南](ruan-lu-you-shi-yong-zhi-nan.md)
+* [🎈遥控助手下载地址和说明](11.md)
+* [❤️ Emby影库推荐（双12特惠）](emby-ying-ku-tui-jian-kuo-he-guo-nei.md)
 * [🎬 奈飞Disney+流媒体合租平台](liu-mei-ti-he-zu-ping-tai.md)
-* [❇️ 国内群组](ru-he-jia-ru-guo-nei-qun-zu.md)
-* [❇️ 国外群组（2w+）](https://t.me/wkongsvlog)
 * [💚IPTV 直播源](iptv-zhi-bo-yuan.md)
 * [🎈DDNSTO 内网穿透工具](ddnsto-nei-wang-chuan-tou-gong-ju.md)
-* [🎵抖音粉丝必读](https://wkbackup.gitbook.io/backup/)
 * [❤️奈飞Netflix百科问答](nai-fei-ying-pian-tui-jian.md)
 * [❤️奈飞Pro会员](https://naifei.pro/m/?rid=1p5c6)
 
 ## 🌟电视盒子推荐
 
 * [⬆️ TOP6 流行电视盒子](dian-shi-he-zi-tui-jian/no-ti-on.md)
-* [🎈Google TV](dian-shi-he-zi-tui-jian/google-tv.md)
-* [🎈MeCool KM2](dian-shi-he-zi-tui-jian/mecool-km2.md)
-* [🎈Tivo Stream 4K](dian-shi-he-zi-tui-jian/ru-he-ji-huo-tivo-stream-4k.md)
-* [🎈Apple TV 4K](dian-shi-he-zi-tui-jian/apple-tv-4k.md)
 * [🌟🎈电视盒子对比](dian-shi-he-zi-tui-jian/dian-shi-he-zi-dui-bi.md)
+* [🎈Apple TV 4K使用指南](dian-shi-he-zi-tui-jian/apple-tv-4k.md)
+* [🎈Google TV使用指南](dian-shi-he-zi-tui-jian/google-tv.md)
+* [🎈Tivo Stream 4K](dian-shi-he-zi-tui-jian/ru-he-ji-huo-tivo-stream-4k.md)
+* [🎈MeCool KM2](dian-shi-he-zi-tui-jian/mecool-km2.md)
 
 ## 🌟APK下载
 
 * [电视盒子APK](apk-xia-zai/dian-shi-he-zi-apk.md)
 
-## 观众高频提问-向下滑动更多👇 <a id="test"></a>
+## 观众高频提问-向下滑动更多👇 <a href="#test" id="test"></a>
 
 * [❤️无障碍上网说明💜](test/wu-zhang-ai-shang-wang-shuo-ming.md)
 * [Google TV /Shield TV/Tivo Stream 4K 已连接无法访问互联网](test/google-tv-xiu-gai-ntp-fu-wu-qi-di-zhi.md)
 * [玩客云技巧](test/wan-ke-yun-ji-qiao.md)
 * [其他教程](test/qi-ta-jiao-cheng.md)
 
-## 商业 <a id="shou-ye"></a>
+## 商业 <a href="#shou-ye" id="shou-ye"></a>
 
----
+***
 
 * [❤️❤️合作必读说明（2021）](he-zuo-shuo-ming.md)
 * [Emoji表情](https://emojixd.com/x9kh)
-
